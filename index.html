@@ -357,36 +357,86 @@
   </section>
 
   <!-- ===== SECTION 6: 料金モデル ===== -->
-  <section id="pricing" class="section section--gray">
+  <section id="pricing" class="section section--white">
     <div class="container">
       <p class="section__label">Pricing</p>
-      <h2 class="section__title">2つの料金タイプから選べます</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card pricing-card--recommended fade-in">
-          <span class="pricing-card__tag">おすすめ</span>
-          <h3 class="pricing-card__title">成果報酬型</h3>
-          <p class="pricing-card__desc">ツール導入によって削減できた人件費の<strong>約40〜55%</strong>を報酬として設定します。</p>
-          <div class="pricing-card__example">
-            <p class="pricing-card__example-label">例</p>
-            <p class="pricing-card__example-text">
-              月<span class="num" data-target="30">0</span>万円のコスト削減<br>（年間<span class="num" data-target="360">0</span>万円）が実現できた場合
-            </p>
-            <p class="pricing-card__example-result">
-              弊社報酬：<strong>150〜200万円</strong><br>
-              <small>（一括または12回払い）＋ 月額保守料</small>
-            </p>
+      <h2 class="section__title">分かりやすい料金体系</h2>
+      
+      <!-- 初回モニター特典 -->
+      <div class="monitor-banner fade-in">
+        <div class="monitor-banner__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M16 3.13a4 4 0 010 7.75M21 21v-2a4 4 0 00-3-3.87"/></svg>
+        </div>
+        <div class="monitor-banner__content">
+          <p class="monitor-banner__title">【今だけ】初回モニター企業　3社限定募集</p>
+          <p class="monitor-banner__desc">試作費用（通常2〜6万円）を<strong>完全無料</strong>で制作します。条件：成果を事例として掲載させていただくこと。</p>
+        </div>
+      </div>
+
+      <div class="pricing-table fade-in">
+        <div class="pricing-row pricing-row--header">
+          <div class="pricing-cell"></div>
+          <div class="pricing-cell">内容</div>
+          <div class="pricing-cell">料金</div>
+        </div>
+        
+        <div class="pricing-row">
+          <div class="pricing-cell pricing-cell--label">
+            <span class="pricing-step">STEP 1</span>
+            <strong>試作<br>（プロトタイプ）</strong>
           </div>
-          <p class="pricing-card__note">コストダウンの計算式・KPIはご契約前に合意・明確化します。</p>
+          <div class="pricing-cell">
+            <p>実際に動くものを作成。見てから判断できるので、リスクが低い。</p>
+            <p class="pricing-note">※大規模な場合は別途お見積もり</p>
+          </div>
+          <div class="pricing-cell pricing-cell--price">
+            <span class="price-main">2〜6万円</span>
+          </div>
         </div>
-        <div class="pricing-card fade-in">
-          <h3 class="pricing-card__title">実費型</h3>
-          <p class="pricing-card__desc">試作〜本開発の工数に応じた実費でのご請求。</p>
-          <ul class="pricing-card__list">
-            <li>成果報酬が難しいケースに対応</li>
-            <li>小規模ツール開発に最適</li>
-            <li>補助金（業務改善助成金等）との併用も検討可能</li>
-          </ul>
+        
+        <div class="pricing-row">
+          <div class="pricing-cell pricing-cell--label">
+            <span class="pricing-step">STEP 2</span>
+            <strong>本番開発</strong>
+          </div>
+          <div class="pricing-cell">
+            <div class="pricing-plan">
+              <strong>ライトプラン</strong>
+              <p>小規模ツール（単機能）</p>
+            </div>
+            <div class="pricing-plan">
+              <strong>スタンダードプラン</strong>
+              <p>中規模ツール（複数機能連携）</p>
+            </div>
+            <div class="pricing-plan">
+              <strong>プレミアムプラン</strong>
+              <p>大規模・要相談</p>
+            </div>
+          </div>
+          <div class="pricing-cell pricing-cell--price">
+            <span class="price-main">10万円</span>
+            <span class="price-main">30万円</span>
+            <span class="price-main">30万円〜</span>
+          </div>
         </div>
+        
+        <div class="pricing-row">
+          <div class="pricing-cell pricing-cell--label">
+            <span class="pricing-step">STEP 3</span>
+            <strong>月額保守</strong>
+          </div>
+          <div class="pricing-cell">
+            <p>サーバー維持費、軽微な修正、トラブル対応など</p>
+            <p class="pricing-note">※実費がかからない場合は無料の場合もあります</p>
+          </div>
+          <div class="pricing-cell pricing-cell--price">
+            <span class="price-main">月3万円</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pricing-supplement fade-in">
+        <p>💡 <strong>補助金活用も可能</strong>：従業員がいる企業の場合、業務改善助成金などが活用できるケースがあります。</p>
       </div>
     </div>
   </section>
@@ -448,22 +498,14 @@
       <p class="section__label">FAQ</p>
       <h2 class="section__title">よくある質問</h2>
       <div class="faq-list">
+        <!-- 費用・見積もり系 -->
         <div class="faq-item fade-in">
           <button class="faq-item__q" aria-expanded="false">
-            <span>コードが書けない、IT知識がない社員しかいませんが大丈夫ですか？</span>
+            <span>費用はいくらですか？</span>
             <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__a">
-            <p>まったく問題ありません。弊社の担当も営業出身で、技術は生成AIでカバーしています。「何ができるかわからない」という状態からのご相談が一番多いです。</p>
-          </div>
-        </div>
-        <div class="faq-item fade-in">
-          <button class="faq-item__q" aria-expanded="false">
-            <span>どんな業種でも対応できますか？</span>
-            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="faq-item__a">
-            <p>物販・EC・営業・就労支援・コンサルなど幅広く対応しています。まずは面談でご状況をお聞かせください。</p>
+            <p>試作（プロトタイプ）は2〜6万円、本番開発は小規模で10万円〜、中規模で30万円〜です。まずは無料相談で業務内容をヒアリングし、概算をお出しします。</p>
           </div>
         </div>
         <div class="faq-item fade-in">
@@ -472,7 +514,7 @@
             <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__a">
-            <p>はい、対応可能です。試作を見てから本開発に進むかどうかご判断ください。</p>
+            <p>はい、可能です。試作を見てから本開発に進むかどうかご判断いただけます。リスクを最小限に抑えて検討できます。</p>
           </div>
         </div>
         <div class="faq-item fade-in">
@@ -481,14 +523,121 @@
             <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-item__a">
-            <p>従業員がいる会社の場合、業務改善助成金などが活用できるケースがあります。詳しくはZOOM面談でご説明します。</p>
+            <p>従業員がいる企業の場合、業務改善助成金などが活用できるケースがあります。実費ベースでのお見積もりも対応しますので、ご相談ください。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>月額費用はかかりますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>はい。ツール稼働に必要なサーバー維持費、軽微な修正、トラブル対応などを含めた保守費として、月3万円が目安です。実費がかからない場合は無料の場合もあります。</p>
+          </div>
+        </div>
+        
+        <!-- 開発期間・プロセス系 -->
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>どれくらいの期間で完成しますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>小規模ツールで1ヶ月、中規模で2〜3ヶ月が目安です。まずは試作を2週間程度で作成し、方向性を確認してから本開発に進みます。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>開発の流れを教えてください</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>①無料相談 → ②業務洗い出し・要件整理 → ③試作制作 → ④本開発 → ⑤納品・テスト → ⑥運用開始・保守対応、という流れです。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>途中で仕様変更はできますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>試作段階では柔軟に対応可能です。本開発開始後も、追加費用が発生する場合がありますが、相談しながら進められます。</p>
+          </div>
+        </div>
+        
+        <!-- 技術・実現性系 -->
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>どんな業務でもツール化できますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>PC上で行う定型作業（リスト作成、メール送信、データ収集、画像加工など）は、ほとんどツール化可能です。まずはご相談ください。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>どんな業種でも対応できますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>物販・EC・不動産・士業・営業・就労支援など幅広く対応しています。まずは面談でご状況をお聞かせください。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>既存のシステム（Salesforce、kintoneなど）と連携できますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>はい、API連携が可能なシステムであれば対応できます。具体的なシステム名をお聞かせいただければ、事前に実現可能性を確認します。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>コードが書けない、IT知識がない社員しかいませんが大丈夫ですか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>全く問題ありません。弊社代表も営業出身で、専門用語を使わずに分かりやすく説明します。サーバーの準備、ツールの設置、使い方のレクチャーまで、全てこちらで対応します。</p>
+          </div>
+        </div>
+        
+        <!-- サポート・保守系 -->
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>納品後のサポートはありますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>はい。月額保守契約に含まれており、軽微なバグ修正、使い方の質問対応、機能の微調整などに対応します。</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>将来的に機能追加はできますか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>はい、可能です。追加開発として別途お見積もりさせていただきます。</p>
+          </div>
+        </div>
+        
+        <!-- その他 -->
+        <div class="faq-item fade-in">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>無理な営業や押し売りはありませんか？</span>
+            <svg class="faq-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-item__a">
+            <p>一切ありません。まずは業務の棚卸しをして、「何ができるか」を一緒に整理するだけの場です。無理に契約を勧めることはありません。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SECTION 8: クロージングCTA ===== -->
+  <!-- ===== SECTION 9: Contact Form ===== -->
   <section id="contact" class="section section--cta">
     <div class="container">
       <h2 class="cta__title">まず話すだけでOKです。</h2>
@@ -496,13 +645,51 @@
         「どの業務がツール化できるか、まだわからない」<br>
         「費用がいくらかかるか不安」<br><br>
         そのまま話しに来てください。<br>
-        ZOOM面談は<strong>無料</strong>です。業務の棚卸しをするだけでも、新しい気づきがあります。
+        相談は<strong>無料</strong>です。業務の棚卸しをするだけでも、新しい気づきがあります。
       </p>
+      
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper fade-in">
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">お名前 <span class="form-required">必須</span></label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label for="company" class="form-label">会社名</label>
+              <input type="text" id="company" name="company" class="form-input" placeholder="株式会社サンプル">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email" class="form-label">メールアドレス <span class="form-required">必須</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="example@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">電話番号</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="090-1234-5678">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">相談内容 <span class="form-required">必須</span></label>
+            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="ツール化したい業務内容や、ご相談内容を自由にお書きください。&#10;例：「営業リスト作成に毎日2時間かかっている」「メール送信を自動化したい」など" required></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn--white btn--pulse">
+              <span>無料相談を申し込む</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+      
       <p class="cta__person">担当：佐藤充泰（合同会社サンボックス代表）</p>
-      <a href="#contact" class="btn btn--white btn--pulse">
-        <span>無料ZOOM面談を申し込む</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
       <p class="cta__note">押し売りはしません。まず「何ができるか」を一緒に整理するだけの場です。</p>
     </div>
   </section>
