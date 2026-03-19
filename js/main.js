@@ -92,6 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
+  /* ===== Hackathon photo slideshow ===== */
+  const slides = document.querySelectorAll('.hackathon-slide');
+  const dots = document.querySelectorAll('.hackathon-dot');
+  if (slides.length > 1) {
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('hackathon-slide--active');
+      dots[current].classList.remove('hackathon-dot--active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('hackathon-slide--active');
+      dots[current].classList.add('hackathon-dot--active');
+    }, 3500);
+  }
+
   /* ===== Smooth scroll for anchor links ===== */
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {

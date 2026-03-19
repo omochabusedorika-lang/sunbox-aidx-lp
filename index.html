@@ -284,7 +284,7 @@
       <!-- プロフィールカード -->
       <div class="profile-card fade-in">
         <div class="profile-card__photo">
-          <img src="images/hackathon-team.jpg" alt="佐藤充泰（ハッカソン会場にて）" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="object-position: 80% center;">
+          <img src="images/sato-profile.jpg" alt="佐藤充泰" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="profile-card__avatar" style="display:none">
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
@@ -328,11 +328,16 @@
         </div>
         <div class="strength-card strength-card--hackathon fade-in">
           <div class="strength-card__photo-wrap">
-            <img src="images/hackathon-venue.jpg" alt="ソフトバンク主催ハッカソン会場（60名参加）" class="strength-card__photo">
+            <img src="images/hackathon-venue.jpg" alt="ソフトバンク主催ハッカソン会場（60名参加）" class="strength-card__photo hackathon-slide hackathon-slide--active">
+            <img src="images/hackathon-team.jpg" alt="入賞チームで集合写真" class="strength-card__photo hackathon-slide">
             <span class="strength-card__photo-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
               3位入賞
             </span>
+            <div class="hackathon-dots">
+              <span class="hackathon-dot hackathon-dot--active"></span>
+              <span class="hackathon-dot"></span>
+            </div>
           </div>
           <h3 class="strength-card__title">生成AIハッカソン<br>3位入賞</h3>
           <p class="strength-card__text">2026年3月、ソフトバンク主催・60名参加のハッカソンで3位入賞。AIを「人任せ」にせず、自分で使いこなせるスキルを持っています。</p>
