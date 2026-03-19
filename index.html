@@ -284,7 +284,7 @@
       <!-- プロフィールカード -->
       <div class="profile-card fade-in">
         <div class="profile-card__photo">
-          <img src="images/sato-profile.jpg" alt="佐藤充泰" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="images/hackathon-team.jpg" alt="佐藤充泰（ハッカソン会場にて）" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="object-position: 80% center;">
           <div class="profile-card__avatar" style="display:none">
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
@@ -326,9 +326,13 @@
           <h3 class="strength-card__title">経営経験10年以上</h3>
           <p class="strength-card__text">会社を潰した経験もある、修羅場をくぐったリアルな経営者です。コスト感覚・現場感覚が体に染み込んでいます。技術屋ではなく「経営者目線」で話ができます。</p>
         </div>
-        <div class="strength-card fade-in">
-          <div class="strength-card__badge strength-card__badge--award">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        <div class="strength-card strength-card--hackathon fade-in">
+          <div class="strength-card__photo-wrap">
+            <img src="images/hackathon-venue.jpg" alt="ソフトバンク主催ハッカソン会場（60名参加）" class="strength-card__photo">
+            <span class="strength-card__photo-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              3位入賞
+            </span>
           </div>
           <h3 class="strength-card__title">生成AIハッカソン<br>3位入賞</h3>
           <p class="strength-card__text">2026年3月、ソフトバンク主催・60名参加のハッカソンで3位入賞。AIを「人任せ」にせず、自分で使いこなせるスキルを持っています。</p>
@@ -382,7 +386,58 @@
     </div>
   </section>
 
-  <!-- ===== SECTION 7: FAQ ===== -->
+  <!-- ===== SECTION 7: 制作実績 ===== -->
+  <section id="works" class="section section--gray">
+    <div class="container">
+      <p class="section__label">Works</p>
+      <h2 class="section__title">「作れる証拠」を<br class="sp-only">お見せします</h2>
+      <p class="section__desc">顧客事例はこれから積み上げます。まず「どんなものを作れるか」を実際のアウトプットでご確認ください。</p>
+      <div class="works-grid">
+        <div class="work-card fade-in">
+          <div class="work-card__img">
+            <img src="images/work-shacho-lp.png" alt="社長の救世主 LP">
+            <div class="work-card__overlay">
+              <a href="https://work-shien.com/1076-2/" target="_blank" rel="noopener" class="work-card__link">サイトを見る →</a>
+            </div>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__type">LP制作</span>
+            <h3 class="work-card__title">社長の救世主 ランディングページ</h3>
+            <p class="work-card__desc">中小企業経営者向けサービスのLP。AIで生成したビジュアルと診断アプリを組み合わせたコンバージョン設計。</p>
+          </div>
+        </div>
+        <div class="work-card fade-in">
+          <div class="work-card__img">
+            <img src="images/work-shacho-app.png" alt="社長の救世主 診断アプリ">
+            <div class="work-card__overlay">
+              <a href="https://jdoedden.gensparkspace.com/" target="_blank" rel="noopener" class="work-card__link">アプリを体験する →</a>
+            </div>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__type">WEBアプリ</span>
+            <h3 class="work-card__title">経営診断WEBアプリ</h3>
+            <p class="work-card__desc">5問のQ&Aで経営の課題を即診断。AIが回答を分析し、最適なアクションを提案するインタラクティブなアプリ。</p>
+          </div>
+        </div>
+        <div class="work-card fade-in">
+          <div class="work-card__img work-card__img--dark">
+            <img src="images/eigyo-tool.png" alt="営業自動化ツール">
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__type">自動化ツール</span>
+            <h3 class="work-card__title">営業自動化ツール（自社用）</h3>
+            <p class="work-card__desc">リスト自動収集・メール文章生成・自動送信を一気通貫で実行。弊社の営業業務で実際に稼働中のツール。</p>
+          </div>
+        </div>
+      </div>
+      <div class="works-note fade-in">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p>現在、初期モニター企業を<strong>3社限定</strong>で募集しています。モニター企業には通常より大幅に低コストでご対応します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 8: FAQ ===== -->
   <section id="faq" class="section section--white">
     <div class="container">
       <p class="section__label">FAQ</p>
