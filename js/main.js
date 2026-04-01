@@ -119,3 +119,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/* ===== Contact Form Handling ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+
+      // Basic validation
+      if (!data.name || !data.email || !data.message) {
+        showMessage('必須項目を入力してください', 'error');
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(data.email)) {
+        showMessage('有効なメールアドレスを入力してください', 'error');
+        return;
+      }
+
+      // Show loading state
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.querySelector('span').textContent;
+      submitBtn.querySelector('span').textContent = '送信中...';
+      submitBtn.disabled = true;
+
+      try {
+        // In a real implementation, you would send this to your backend
+        // For now, we'll simulate a successful submission
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        showMessage('お問い合わせありがとうございます！担当者より3営業日以内にご連絡いたします。', 'success');
+        contactForm.reset();
+
+        // Log to console for demonstration (remove in production)
+        console.log('Form submission:', data);
+        
+      } catch (error) {
+        showMessage('送信に失敗しました。しばらくしてから再度お試しください。', 'error');
+      } finally {
+        submitBtn.querySelector('span').textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+  function showMessage(message, type) {
+    formMessage.textContent = message;
+    formMessage.className = `form-message ${type}`;
+    formMessage.style.display = 'block';
+
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      formMessage.style.display = 'none';
+    }, 5000);
+  }
+});
